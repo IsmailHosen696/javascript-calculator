@@ -56,6 +56,9 @@ const resultscreen = document.querySelector("#result");
             case '+':
                 return this.result = parseFloat(this.newnum) + parseFloat(this.oldnum);
             case '-':
+                if ((parseFloat(this.newnum) - parseFloat(this.oldnum)) === 0) {
+                    return this.result = '0';
+                }
                 return this.result = parseFloat(this.newnum) - parseFloat(this.oldnum);
             case '×':
                 if (parseFloat(this.newnum === 0) || parseFloat(this.oldnum) === 0) return this.result = '0'
