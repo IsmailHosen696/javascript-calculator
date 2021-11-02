@@ -152,9 +152,9 @@ const resultscreen = document.querySelector("#result");
                 this.cleardisplay();
                 return this.displaynum();
             case 'Enter':
-                console.log(e.key);
                 this.calculate()
-                return this.displaynum()
+                this.displaynum()
+                break;
             default:
                 return this.displaynum();
         }
